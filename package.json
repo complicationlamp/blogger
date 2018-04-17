@@ -1,0 +1,12 @@
+{
+  "name": "blogger",
+  "version": "1.0.0",
+  "description": "blogger api",
+  "main": "models.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "kl",
+  "license": "ISC"
+}
