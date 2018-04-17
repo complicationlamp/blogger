@@ -16,7 +16,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
   });
 
-app.use('/blogger', bloggerRouter);
+
+//DO blogger needs to be to blogpost
+app.use('/blogposts', bloggerRouter);
 
 app.listen(process.env.PORT || 8080, () => {
     console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
