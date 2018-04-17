@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "kl",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^3.2.1"
+  }
 }
