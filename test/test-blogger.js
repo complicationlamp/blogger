@@ -62,7 +62,7 @@ describe('blogposts', function() {
                 // expect(res.body).to.deep.equal(Object.assign(newItem, {id: res.body.id}));
           });
       });
-
+//*******************************put and delete not working saying empty object */
     it('should update items on PUT', function() {
         return chai.request(app)
             .get('/blogger')
