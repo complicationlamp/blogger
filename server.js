@@ -10,11 +10,11 @@ app.use(morgan('common'));
 
 
 //DO need to set up css and client js
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
-  });
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/views/index.html');
+//   });
 
 
 //DO blogger needs to be to blogpost

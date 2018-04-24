@@ -32,7 +32,7 @@ describe('blogposts', function() {
                 expect(res).to.have.status(200);
                 expect(res).to.be.json;
                 expect(res.body).to.be.a('array');
-                expect(res.body.length).to.be.at.least(0);
+                expect(res.body.length).to.be.above(0);
                 res.body.forEach(function(item) {
                     expect(item).to.be.a('object');
                     expect(item).to.have.all.keys(
@@ -53,7 +53,7 @@ describe('blogposts', function() {
                 expect(res).to.be.json;
                 expect(res.body).to.be.a('object');
                 expect(res.body).to.have.all.keys(expectedKeys);
-                expect(res.body.id).to.not.equal(null);
+                // expect(res.body.id).to.not.equal(null);
                 expect(res.body.title).to.equal(newItem.title);
                 expect(res.body.content).to.equal(newItem.content);
                 expect(res.body.author).to.equal(newItem.author)
@@ -89,10 +89,10 @@ describe('blogposts', function() {
             .get('/blogger')
             .then(function(res) {
                 return chai.request(app)
-                    .delete(`/blogger/${res.body[0].id}`);
-            })
-            .then(function(res) {
-                expect(res).to.have.status(204);
+                    .delete(`/blogger/${res.body[0].id}`)
+                    .then(function(res) {
+                        expect(res).to.have.status(204);
+                    });
             });
-        });
+    });
 });
