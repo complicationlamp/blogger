@@ -7,7 +7,7 @@ const jsonParser = bodyParser.json();
 //do we need to make this an object?
 const {BlogPosts} = require('./models');
 
-BlogPosts.create('Blog post0','Nulla eligendi perferendis voluptas corporis iure reiciendis veritatis. Aut alias cumque enim minus. Soluta voluptatibus ea laudantium provident distinctio at cupiditate. Excepturi sed beatae sed. Culpa molestias omnis dolor quas corporis velit aut. Est dolor animi sed.');
+BlogPosts.create('Blog post0','Nulla eligendi perferendis voluptas corporis iure reiciendis veritatis. Aut alias cumque enim minus. Soluta voluptatibus ea laudantium provident distinctio at cupiditate. Excepturi sed beatae sed. Culpa molestias omnis dolor quas corporis velit aut. Est dolor animi sed.', 'Kyle');
 
 router.get('/', (req, res) => {
     res.json(BlogPosts.get());
