@@ -64,8 +64,9 @@ describe('blogposts', function() {
       });
 //*******************************put and delete not working saying empty object */
     it('should update items on PUT', function() {
+
         return chai.request(app)
-            .get('/blogger')
+            .get('/blogposts')
             .then(function(res) {
                 const updateData = Object.assign(res.body[0], {
                     title: 'foo',
@@ -73,7 +74,7 @@ describe('blogposts', function() {
                 });
                 // updateData.id = res.body[0].id;
                 return chai.request(app)
-                    .put(`/blogger/${res.body[0].id}`)
+                    .put(`/blogposts/${res.body[0].id}`)
                     .send(updateData)
                     .then(function(res) {
                         expect(res).to.have.status(204);
@@ -86,10 +87,10 @@ describe('blogposts', function() {
         return chai.request(app)
               // first have to get so we have an `id` of item
               // to delete
-            .get('/blogger')
+            .get('/blogposts')
             .then(function(res) {
                 return chai.request(app)
-                    .delete(`/blogger/${res.body[0].id}`)
+                    .delete(`/blogposts/${res.body[0].id}`)
                     .then(function(res) {
                         expect(res).to.have.status(204);
                     });
